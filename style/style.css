@@ -1,0 +1,130 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Pliant:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#fundoPrincipal {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.212), rgba(0, 0, 0, 0.555)), url('fundo.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+#fundoFormacao {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.212), rgba(0, 0, 0, 0.555)), url('fundoFormacao.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+#fundoPortifolio {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.212), rgba(0, 0, 0, 0.555)), url('portifolio.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+#fundocontato {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.212), rgba(0, 0, 0, 0.555)), url('contato.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 15vh;
+}
+
+header>nav {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header>nav>h1>a {
+    color: #dddbff;
+    text-decoration: none;
+}
+
+main {
+    width: 60vw;
+    height: 75vh;
+    align-items: center;
+}
+
+main>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: #dddbff;
+}
+
+h1 {
+    font-size: 3rem;
+    font-family: 'Pliant, wght ' Georgia, 'Times New Roman', Times, serif;
+
+}
+
+h2,
+h3 {
+    font-family: 'Roboto Condensed', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+p {
+    font-size: 1.25rem;
+    text-align: justify;
+    line-height: 1.6;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main>div>h2 {
+
+    font-size: 1.75rem;
+    /* Subtítulos da página (~28px) */
+    font-weight: 600;
+    color: #dddbff;
+}
+
+
+main>div>h3 {
+    font-size: 3rem;
+}
+
+
+.img {
+    width: 650x;
+    height: 50vh;
+    object-fit: contain;
+
+}
+
+a {
+    text-decoration: none;
+    color: #dddbff;
+}
+
+:hover>a {
+    color: blue;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/contato.css">
+    <title>Fale Comigo</title>
+</head>
+
+<body id="fundocontato">
+    <script src="menu.js"></script><!-- Chama menu compartilhado-->
+
+    <h1>Me Envie Sua Mensagem</h1>
+    
+    <section>
+        <form id="meuFormulario" action="contato.html" method="POST">  <!-- Formulario para entrar em contato-->
+      
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="seu-email@dominio.com" required>
+                <span id="erroEmail" style="color: red; display: none; font-size: 13px; margin-top: 5px;">
+                    Por favor, insira um e-mail válido.
+                </span>
+            </div>
+
+            <div class="form-group">
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Como posso te ajudar?" required></textarea>
+            </div>
+
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+    </section>
+
+                <!-- Verificação se o Email é valido-->
+    <script> 
+    document.getElementById('meuFormulario').addEventListener('submit', function(event) {
+        // Bloqueia o envio automático padrão do HTML para o JS assumir o controle
+        event.preventDefault(); 
+
+        const emailInput = document.getElementById('email');
+        const emailValue = emailInput.value;
+        const erroMensagem = document.getElementById('erroEmail');
+
+        const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!regexEmail.test(emailValue)) {
+            erroMensagem.style.display = 'block';
+            emailInput.style.borderColor = 'red';
+        } else {
+            erroMensagem.style.display = 'none';
+            emailInput.style.borderColor = '#ccc';
+            
+            // 1. Mostra o aviso de sucesso para o usuário
+            alert('Formulário enviado com sucesso!');
+            
+            // 2. Redireciona para a página inicial (mude "index.html" para o nome do seu arquivo principal)
+            window.location.href = "index.html"; 
+        }
+    });
+</script>
+</body>
+
+</html>
